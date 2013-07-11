@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Hyve Timeline plugin</title>
+  <meta name="description" content="Content Timeline HTML5/jQuery plugin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/dark.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+    <link href="css/ie8fix.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.timeline.js"></script>
+  <script type="text/javascript" src="js/image.js"></script>
+  <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('.timeline').timeline({
+         startItem: 'first'
+       });
+    });
+    $(document).ready(function() {
+      $('a.fancybox').fancybox({
+        'overlayShow' : true,
+        'autoScale' : true,
+        'opacity'   : true,
+        'overlayColor'    : '#000',
+        'overlayOpacity'  : 0.9,
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic'
+      });
+      $('a.fancyboxSwf').click(function() {
+        $.fancybox({
+          'padding'   : 0,
+          'autoScale'   : false,
+          'transitionIn'  : 'none',
+          'transitionOut' : 'none',
+          'title'     : this.title,
+          'width'   : 680,
+          'height'    : 495,
+          'href'      : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+          'type'      : 'swf',
+          'swf'     : {
+            'wmode'    : 'transparent',
+            'allowfullscreen' : 'true'
+          }
+        });
+        return false;
+      });
+    });
+  </script>
+</head>
+<body>
+
+<div class="timelineLoader">
+	<img src="images/loadingAnimation.gif" />
+</div>
+<!-- BEGIN DARK -->
+<div class="timeline tl">
+
+		<div class="item" data-id="05/07/2013" data-description="Réception de l'imprimante 3D">
+			<h2>5 juillet 2013</h2>
+			<span>Malheureusment, il est trop tard pour l'assembler, mais rendez-vous lundi !</span>
+    </div>
+
+    <div class="item" data-id="08/07/2013 17h" data-description="Fin de la présentation de Peaks, il est temps de se remonter les manches">
+      <h2>8 juillet 2013 - 17h</h2>
+      <span>17h, on rentre de la présentation de PEAKS, que faire ? et si on commençais à assembler l'imprimante 3D ?</span>
+    </div>
+
+    <div class="item" data-id="08/07/2013 18h58" data-description="L'assemblage avance mais on ne lit pas la doc...">
+      <h2>8 juillet 2013 - 18h58</h2>
+      <span>Ne pas lire la documentation provoque quelques petits désagréments.</span>
+      <a class="fancybox" href="datas/20130708_185834.jpg"><img src="datas/20130708_185834_m.jpg" alt=""/></a>
+    </div>
+		<div class="item_open" data-id="08/07/2013 18h58">
+			<div class="timeline_open_content">
+        <h2>Combien d'ingénieurs faut il pour assembler les 6 fasses d'un cube ?</h2>
+        N'ayant pas lu la documentation, on ne peut pas emboiter la face supérieur de l'imprimante ... et oui, il y'a un ordre logique, il ne reste plus qu'à recommencer.
+        <br /><br />
+        La prochaine fois on lira la documentation en entier, pas en diagonale !
+			</div>
+		</div>
+
+    <div class="item" data-id="08/07/2013 19h30" data-description="On dirait bien qu'on va en avoir pour un bon moment !">
+      <h2>8 juillet 2013 - 19h30</h2>
+      <span>Ça avance mais on est loin d'avoir fini !</span>
+      Lucile et Floriant vont chercher quelques victuailles ! et en particulier des
+      <a class="fancyboxSwf" href="http://www.youtube.com/watch?v=5icSN0zBVnk&feature=player_embedded&autoplay=1">chips</a>.
+    </div>
+
+    <div class="item" data-id="08/07/2013 22h01" data-description="L'heure avance et la doc est pas simple...">
+      <h2>8 juillet 2013 - 22h01</h2>
+      <span>L'heure avance et la doc est pas simple....</span>
+      <a class="fancybox" href="datas/20130708_220110.jpg"><img src="datas/20130708_220110_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="08/07/2013 22h01">
+      <div class="timeline_open_content">
+        <h2>Non mais en vrai, où en sommes nous ?</h2>
+        <a class="fancybox" href="datas/20130708_220154.jpg"><img src="datas/20130708_220154_m.jpg" alt=""/></a>
+        <br /><br />
+        On se perd un peu entre les étapes, les messages importants, bref on cherche !
+      </div>
+    </div>
+
+    <div class="item" data-id="08/07/2013 22h02" data-description="On a un peu de renfort !">
+      <h2>8 juillet 2013 - 22h02</h2>
+      <span>Un peu de renfort, il faut quelqu'un de minutieux !</span>
+      <a class="fancybox" href="datas/20130708_220210.jpg"><img src="datas/20130708_220210_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="08/07/2013 22h02">
+      <div class="timeline_open_content">
+        <h2>Ce coup ci, on n'utilise pas la lime !</h2>
+        Heureusement qu'on a quelqu'un pour travailler à la place de Florian, sinon il limerait tout :<br />
+        - "Il manque 2 millimètres"<br />
+        - "T'es certain que c'est la bonne pièce au moins ?"<br />
+        - "Oui oui !"<br />
+        - "C'est pas ça que tu cherches en fait ? pose cette lime !"
+      </div>
+    </div>
+
+    <div class="item" data-id="08/07/2013 22h25" data-description="On fixe la tête d'impression !">
+      <h2>8 juillet 2013 - 22h25</h2>
+      <span>On fixe la tête d'impression !</span>
+      <a class="fancybox" href="datas/20130708_222528.jpg"><img src="datas/20130708_222528_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="08/07/2013 22h25">
+      <div class="timeline_open_content">
+        <h2>On dit tête d'impression pas tête de lecture !</h2>
+        Certaines personnes ont un peu de mal avec les terminologies, il est important d'être précis :)
+      </div>
+    </div>
+
+    <div class="item" data-id="08/07/2013 23h16" data-description="On racorde l'électronique !">
+      <h2>8 juillet 2013 - 23h16</h2>
+      <span>On racorde l'électronique !</span>
+      <a class="fancybox" href="datas/20130708_231620.jpg"><img src="datas/20130708_231620_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="08/07/2013 23h16">
+      <div class="timeline_open_content">
+        <h2>le fils rouge sur le bouton rouge le fils verte sur le bouton verte </h2>
+        <a class="fancyboxSwf" href="https://www.youtube.com/watch?v=sqBLWoWT5Is&feature=player_embedded&=autoplay=1">On a retrouvé la 7ème compagnie</a>
+      </div>
+    </div>
+
+    <div class="item" data-id="09/07/2013 00h01" data-description="Premier calibrage !">
+      <h2>9 juillet 2013 - 00h01</h2>
+      <span>Premier calibrage !</span>
+      <a class="fancybox" href="datas/20130709_000121.jpg"><img src="datas/20130709_000121_m.jpg" alt=""/></a>
+    </div>
+
+    <div class="item" data-id="09/07/2013 00h18" data-description="Première tentative d'impression">
+      <h2>9 juillet 2013 - 00h18</h2>
+      <span>Première tentative d'impression et ...</span>
+      <a class="fancybox" href="datas/20130709_001837.jpg"><img src="datas/20130709_001837_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="09/07/2013 00h18">
+      <div class="timeline_open_content">
+        <h2>ça marche pas !</h2>
+        <a class="fancybox" href="datas/20130709_001840.jpg"><img src="datas/20130709_001840_m.jpg" alt=""/></a>
+      </div>
+    </div>
+
+    <div class="item" data-id="09/07/2013 01h10" data-description="Il est l'heure derentre">
+      <h2>9 juillet 2013 - 01h10</h2>
+      <span>Il est l'heure de rentrer, tout le monde est fatigué.</span>
+      On a pas réussi à imprimer, tout le monde est un peu deçu, mais bon, ce n'est que partie remise !
+    </div>
+
+    <div class="item" data-id="09/07/2013 19h28" data-description="Première impression">
+      <h2>9 juillet 2013 - 19h28</h2>
+      <span>Première impression</span>
+      <a class="fancybox" href="datas/20130709_192804.jpg"><img src="datas/20130709_192804_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="09/07/2013 18h28">
+      <div class="timeline_open_content">
+        <h2>ça imprime !</h2>
+        Mal mais ça imprime ! Floriant a réglé le système d'alimentation en plastique ! Belle exploit !
+      </div>
+    </div>
+
+    <div class="item" data-id="09/07/2013 20h32" data-description="Première pièce imprimée">
+      <h2>9 juillet 2013 - 20h32</h2>
+      <span>Première pièce imprimée</span>
+      <a class="fancybox" href="datas/20130709_203205.jpg"><img src="datas/20130709_203205_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="09/07/2013 20h32">
+      <div class="timeline_open_content">
+        <h2>ça imprime !</h2>
+        Mal mais ça imprime ! Floriant a réglé le système d'alimentation en plastique ! Belle exploit !
+      </div>
+    </div>
+
+    <div class="item" data-id="10/07/2013 15h02" data-description="May the force be with us!">
+      <h2>10 juillet 2013 - 15h02</h2>
+      <span>May the force be with us!</span>
+      Le calibrage avancent !<br />
+      <a class="fancybox" href="datas/20130710_150256.jpg"><img src="datas/20130710_150256_m.jpg" alt=""/></a>
+    </div>
+
+    <div class="item" data-id="10/07/2013 19h27" data-description="Yoda is born!">
+      <h2>10 juillet 2013 - 19h27</h2>
+      <span>Yoda is born!</span>
+      <a class="fancybox" href="datas/20130710_192707.jpg"><img src="datas/20130710_192707_m.jpg" alt=""/></a>
+    </div>
+
+    <div class="item" data-id="10/07/2013 20h16" data-description="Le premier buste de robot!">
+      <h2>10 juillet 2013 - 20h16</h2>
+      <span>Le premier buste de robot!</span>
+      <a class="fancybox" href="datas/20130711_133625.jpg"><img src="datas/20130711_133625_m.jpg" alt=""/></a>
+    </div>
+    <div class="item_open" data-id="10/07/2013 20h16">
+      <div class="timeline_open_content">
+        <h2>En model réduit</h2>
+        environ 1/4 de la taille finale avec une qualité faible le tout en 50 minutes !
+      </div>
+    </div>
+
+    <div class="item" data-id="11/07/2013" data-description="L'évolution des résultats !">
+      <h2>11 juillet 2013</h2>
+      <span>L'évolution des résultats !</span>
+      <a class="fancybox" href="datas/20130711_133609.jpg"><img src="datas/20130711_133609_m.jpg" alt=""/></a>
+    </div>
+
+</div> <!-- END DARK -->
+
+</body>
+</html>
